@@ -10,6 +10,8 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import WarningIcon from "@mui/icons-material/Warning";
 import Unstaktable from "./Unstaktable";
 
+import logo from "../../images/panther-logo.svg";
+
 import "./styles.scss";
 
 
@@ -128,7 +130,7 @@ export default function Staking() {
                                 <Box display={"flex"} alignItems={"center"}>
                                     <Button className="max-button">MAX</Button>
                                     <Box className="logo">
-                                        <img src="/images/panter-logo.svg" />
+                                        <img src={logo} />
                                     </Box>
                                 </Box>
                             </Box>

@@ -10,6 +10,9 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import logo from "../../images/panther-logo.svg";
+import accountAvatar from "../../images/account-avatar.png";
+
 
 export default function HeaderBar() {
     return (
@@ -25,7 +28,7 @@ export default function HeaderBar() {
                             alignItems={"center"}
                         >
                             <Box className="logo">
-                                <img src="/images/panter-logo.svg" />
+                                <img src={logo} />
                             </Box>
                             <Typography
                                 className="nav-item active"
@@ -83,21 +86,21 @@ export default function HeaderBar() {
                                             0xde90...982{" "}
                                             <img
                                                 className="account-avatar"
-                                                src="/images/account-avatar.png"
+                                                src={accountAvatar}
                                             />{" "}
                                         </MenuItem>
                                         <MenuItem value={"0xde90...911"}>
                                             0xde90...911{" "}
                                             <img
                                                 className="account-avatar"
-                                                src="/images/account-avatar.png"
+                                                src={accountAvatar}
                                             />{" "}
                                         </MenuItem>
                                         <MenuItem value={"0xde90...923"}>
                                             0xde90...923{" "}
                                             <img
                                                 className="account-avatar"
-                                                src="/images/account-avatar.png"
+                                                src={accountAvatar}
                                             />{" "}
                                         </MenuItem>
                                     </Select>
