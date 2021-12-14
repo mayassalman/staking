@@ -8,12 +8,14 @@ import Typography from "@mui/material/Typography";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import WarningIcon from "@mui/icons-material/Warning";
+import { Link } from "@mui/material";
 import Unstaktable from "./Unstaktable";
-
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
 import logo from "../../images/panther-logo.svg";
-
+import Input from '@mui/material/Input';
+import FormControl from '@mui/material/FormControl';
 import "./styles.scss";
-
 
 export default function Staking() {
     const [toggle, setToggle] = React.useState("stake");
@@ -44,9 +46,7 @@ export default function Staking() {
         <Box width={"100%"} margin={"0 5"}>
             <Box className="top-card-header">
                 <Box className="header-content">
-                    <Typography className="subtitle-summary">
-                        $0.721
-                    </Typography>
+                    <Typography className="subtitle-summary">$0.721</Typography>
                     <Typography variant="caption">ZKP Price</Typography>
                 </Box>
                 <Box className="header-content">
@@ -116,17 +116,26 @@ export default function Staking() {
                             </Box>
 
                             <Box className="light-box">
-                                <span>
-                                    <Typography variant="h5" component="span">
+                                <Input
+                                    sx={{ m: 2, mt: 3, width: '17ch', border: 0 }}
+                                    id="staking-value"
+                                    autoComplete='off'
+                                    autoFocus={true}
+                                    placeholder={"15000"}
+                                    disableUnderline={true}
+                                    endAdornment={<InputAdornment position="end" >
+                                        <span id="price-unit">
+                                            ZKP
+                                        </span>
+
+                                    </InputAdornment>}
+                                    aria-describedby="staking-value-helper-text"
+
+                                />
+                                {/* <Typography variant="h5" component="span">
                                         12,000
-                                    </Typography>
-                                    <Typography
-                                        variant="subtitle1"
-                                        component="span"
-                                    >
-                                        ZKP
-                                    </Typography>
-                                </span>
+                                    </Typography> */}
+                                {/* </span> */}
                                 <Box display={"flex"} alignItems={"center"}>
                                     <Button className="max-button">MAX</Button>
                                     <Box className="logo">
@@ -152,7 +161,10 @@ export default function Staking() {
                         <Typography variant="caption">
                             You will need to unstake in order for your staked
                             assets to be liquid again. This process will take 7
-                            days to complete. Learn more.
+                            days to complete.
+                            <Link href="#" underline="always" color="inherit">
+                                Learn more
+                            </Link>
                         </Typography>
                     </Box>
                 </CardContent>
