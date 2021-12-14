@@ -1,0 +1,62 @@
+.MuiTable-root {
+    border-collapse: separate !important;
+    border-spacing: 0 8px !important;
+}
+.MuiTable-root,
+.MuiTableContainer-root {
+    background-color: transparent !important;
+}
+.MuiTableRow-head th {
+    font-family: "Inter" !important;
+    font-weight: 500;
+    font-size: 14px;
+
+    color: #ffffff;
+    opacity: 0.5;
+}
+.MuiTableCell-root {
+    border-bottom: none !important;
+    color: #ffffff !important;
+    font-family: "Inter" !important;
+
+    font-weight: 500;
+    font-size: 16px;
+}
+.MuiTableBody-root .MuiTableRow-root {
+    background: linear-gradient(
+        0deg,
+        rgba(146, 159, 183, 0.35),
+        rgba(146, 159, 183, 0.35)
+    );
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 8px;
+}
+.MuiTableBody-root .MuiTableRow-root .MuiTableCell-root:first-child {
+    border-radius: 8px 0 0 8px;
+}
+.MuiTableBody-root .MuiTableRow-root .MuiTableCell-root:last-child {
+    border-radius: 0px 8px 8px 0px;
+}
+.MuiTable-root .btn {
+    color: #fff;
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.12) 0%,
+            rgba(255, 255, 255, 0) 100%
+        ),
+        #205bea;
+    border-radius: 6px;
+    text-transform: capitalize;
+    width: 116px;
+    height: 35px;
+    font-size: 12px !important;
+}
+.MuiTable-root .disable.btn {
+    color: #fff;
+    background: linear-gradient(
+        0deg,
+        rgba(146, 159, 183, 0.35),
+        rgba(146, 159, 183, 0.35)
+    );
+}

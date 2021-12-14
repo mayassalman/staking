@@ -1,0 +1,162 @@
+@import "../../variables";
+.MuiCard-root {
+    padding: 16px;
+    border-radius: 16px !important;
+    background-color: rgba(99, 114, 136, 0.2) !important;
+    color: #fff !important;
+}
+.blue-box {
+    margin: auto;
+    border-radius: 16px;
+    min-height: 135px;
+    background-image: linear-gradient(196deg, #022a8d, #2d61ca, #4b7bd0);
+    color: #fff;
+    text-align: start;
+}
+.subtitle {
+    font-weight: 800 !important;
+    font-size: 18px !important;
+    line-height: 42px !important;
+}
+.big-number {
+    font-weight: 800 !important;
+    font-size: 31px !important;
+    margin-inline-end: 8px !important;
+}
+.subtitle-light {
+    color: #e7e7e7;
+    font-size: 14px !important;
+    margin-inline-end: 16px !important;
+    line-height: 30px !important;
+}
+.secondary-dark {
+    color: #fff;
+    opacity: 0.5;
+    font-weight: 700;
+}
+.full-width-btn {
+    width: 100%;
+    color: #fff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.36) !important;
+    text-transform: capitalize !important;
+    border-radius: 8px !important;
+    height: 43.5px;
+    padding: 4px 8px !important;
+}
+.top-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+
+    border: 1px solid #384258;
+    border-radius: 10px;
+    height: 90px;
+    margin-bottom: 1.5rem;
+}
+.top-card-header .MuiTypography-caption {
+    color: #73829e;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+}
+.subtitle-summary {
+    color: #fff;
+    font-weight: 700;
+}
+.MuiToggleButtonGroup-root button.Mui-selected {
+    opacity: 1;
+    color: #fff;
+    background-color: rgba(100, 107, 125, 0.5);
+    border-radius: 8px !important;
+}
+.MuiToggleButtonGroup-root button {
+    padding: 8px;
+    border: none !important;
+    font-size: 14px;
+    width: 100px;
+    text-transform: capitalize;
+    color: #fff;
+    opacity: 0.5;
+}
+.MuiToggleButtonGroup-root {
+    padding: 12px;
+    background-color: #373b46;
+    border-radius: 10px !important;
+    margin-top: 12px;
+}
+.light-box {
+    background: linear-gradient(
+        0deg,
+        rgba(146, 159, 183, 0.35),
+        rgba(146, 159, 183, 0.35)
+    );
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 10px;
+}
+.light-box .logo {
+    width: 57px;
+    height: 57px;
+}
+
+.light-box .MuiTypography-h5 {
+    font-weight: 800 !important;
+    color: #ffdfbd !important;
+    margin-inline-end: 16px !important;
+}
+.max-button {
+    width: 62.43px;
+    height: 28.15px;
+    color: #fff !important;
+    background: linear-gradient(
+        0deg,
+        rgba(43, 51, 65, 0.25),
+        rgba(43, 51, 65, 0.25)
+    );
+    border: 1px solid #485267;
+    margin-inline-end: 16px !important;
+    border-radius: 16px !important;
+}
+.warning-box {
+    text-align: start;
+    margin-top: 32px;
+    margin-bottom: 0;
+    border: 1px solid rgb(0 0 0 / 38%);
+    height: auto;
+
+    background-image: linear-gradient(216deg, #0000007a, transparent);
+    padding: 16px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card-container {
+    align-items: flex-start;
+    margin-top: 32px !important;
+}
+.result {
+    background-color: #1e4eb4;
+
+    width: 96%;
+    margin: auto;
+    border-radius: 10px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.warning-box .MuiSvgIcon-root {
+    fill: yellow;
+    margin-inline-end: 8px;
+    margin-bottom: 20px;
+}
+.available-zpk {
+    color: #ffdfbd !important;
+}
+.error-outline {
+    margin-left: 4px;
+    margin-bottom: -5px;
+}
