@@ -10,11 +10,10 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import WarningIcon from "@mui/icons-material/Warning";
 import { Link } from "@mui/material";
 import Unstaktable from "./Unstaktable";
-import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import logo from "../../images/panther-logo.svg";
-import Input from '@mui/material/Input';
-import FormControl from '@mui/material/FormControl';
+import Input from "@mui/material/Input";
+import NumberFormat from 'react-number-format';
 import "./styles.scss";
 
 export default function Staking() {
@@ -41,6 +40,7 @@ export default function Staking() {
         onChange: handleChange,
         exclusive: true,
     };
+    const [amountToStake, setAmountToStake] = React.useState(10000);
 
     return (
         <Box width={"100%"} margin={"0 5"}>
@@ -117,27 +117,35 @@ export default function Staking() {
 
                             <Box className="light-box">
                                 <Input
-                                    sx={{ m: 2, mt: 3, width: '17ch', border: 0 }}
+                                    sx={{
+                                        m: 2,
+                                        mt: 3,
+                                        width: "17ch",
+                                        border: 0,
+                                    }}
+                                    // type="number"
+                                    value={amountToStake}
+                                    onChange={(e) => { setAmountToStake(Number(e.target.value) || 0) }}
                                     id="staking-value"
-                                    autoComplete='off'
+                                    autoComplete="off"
                                     autoFocus={true}
-                                    placeholder={"15000"}
+                                    placeholder={amountToStake.toString()}
                                     disableUnderline={true}
-                                    endAdornment={<InputAdornment position="end" >
-                                        <span id="price-unit">
-                                            ZKP
-                                        </span>
-
-                                    </InputAdornment>}
+                                    // inputProps={{ inputProps: { min: 0, max: 10, pattern: '^[1-9]d*$' } }}
+                                    endAdornment={
+                                        <InputAdornment position="end">
+                                            <span id="price-unit">ZKP</span>
+                                        </InputAdornment>
+                                    }
                                     aria-describedby="staking-value-helper-text"
-
                                 />
-                                {/* <Typography variant="h5" component="span">
-                                        12,000
-                                    </Typography> */}
-                                {/* </span> */}
                                 <Box display={"flex"} alignItems={"center"}>
-                                    <Button className="max-button">MAX</Button>
+                                    <Button className="max-button"
+                                        onClick={() => {
+                                            setAmountToStake(12520);
+                                        }}
+                                    >MAX
+                                    </Button>
                                     <Box className="logo">
                                         <img src={logo} />
                                     </Box>
@@ -172,7 +180,15 @@ export default function Staking() {
                 {toggle == "stake" && (
                     <>
                         <CardActions>
-                            <Box className="result"> Stake 12,000 ZPK</Box>
+                            <Box className="result">
+                                <Button className="staking-button"
+                                    onClick={() => {
+                                        alert(12520);
+                                    }}
+                                >
+                                    Stake {amountToStake.toString()} ZPK
+                                </Button>
+                            </Box>
                         </CardActions>
                     </>
                 )}
